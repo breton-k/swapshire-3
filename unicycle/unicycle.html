@@ -1,0 +1,67 @@
+<head>
+  <title>Unicycle</title>
+
+      <script>
+        (function() {
+            var t   = document.createElement('script');
+            t.type  = 'text/javascript';
+            t.async = true;
+            t.id    = 'persona-lib';
+            t.src = '//login.persona.org/include.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(t, s);
+        })();
+    </script>
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">unicycle</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Goods<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">All</a></li>
+            <li><a href="#">Auto</a></li>
+            <li><a href="#">Clothing</a></li>
+            <li><a href="#">Electronics</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Services<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Services Needed</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Services Offered</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Rideshare</a></li>
+        <li><a href="#">Off-Campus Housing</a></li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        {{> loginButtons}}
+      </ul>
+
+    </div>
+  </div>
+</nav>
+<center>
+{{> createListing}}
+</center>
+</body>
+
+<template name="createListing">
+  <a href="#" class="btn btn-default">Create Listing</a>
+</template>
